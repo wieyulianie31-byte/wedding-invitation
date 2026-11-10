@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Wedding of Adi & Anita | 28 November 2026</title>
+  
+  <!-- Meta Open Graph untuk Preview WhatsApp & Medsos -->
+  <meta property="og:title" content="The Wedding of Adi & Anita">
+  <meta property="og:description" content="Undangan Pernikahan Digital Adi Sutisna & Anita Intan Lestari - Sabtu, 28 November 2026">
+  <meta property="og:image" content="assets/images/hero-cover.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- AUDIO PLAYER -->
+  <audio id="wedding-audio" loop preload="auto">
+    <source src="assets/music/wedding-music.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung elemen audio.
+  </audio>
+
+  <!-- TOMBOL KONTROL MUSIK -->
+  <button id="music-toggle" class="music-control-btn hidden" aria-label="Kontrol Musik">
+    <i class="fas fa-compact-disc fa-spin"></i>
+  </button>
+
+  <!-- 1. OPENING COVER -->
+  <section id="opening-cover" class="cover-section">
+    <div class="cover-overlay"></div>
+    <div class="cover-content text-center">
+      <p class="bismillah-text">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+      <p class="sub-title">THE WEDDING OF</p>
+      <h1 class="couple-title">Adi & Anita</h1>
+      <p class="date-badge">28 NOVEMBER 2026</p>
+      
+      <div class="guest-card">
+        <p class="guest-prefix">Kepada Yth. Bapak/Ibu/Saudara/i</p>
+        <h3 id="guest-family-name" class="guest-name"></h3>
+        <h4 id="guest-individual-name" class="guest-subname"></h4>
+      </div>
+
+      <button id="btn-open-invitation" class="btn-primary glow-effect">
+        <i class="fas fa-envelope-open"></i> BUKA UNDANGAN
+      </button>
+    </div>
+  </section>
+
+  <!-- MAIN WRAPPER (Hidden initially) -->
+  <div id="main-content" class="main-wrapper hidden-content">
+
+    <!-- A. PEMBUKAAN ISLAMI -->
+    <section id="home" class="section text-center">
+      <div class="container">
+        <div class="islamic-ornament"></div>
+        <h2 class="arabic-heading">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</h2>
+        <p class="greeting">Assalamu’alaikum Warahmatullahi Wabarakatuh</p>
+        <p class="opening-text">
+          Dengan memohon rahmat dan ridha Allah SWT, kami bermaksud menyelenggarakan pernikahan putra-putri kami.
+        </p>
+      </div>
+    </section>
+
+    <!-- B. AYAT AL-QUR'AN -->
+    <section class="section section-dark text-center">
+      <div class="container">
+        <div class="quran-card">
+          <p class="arabic-verse">
+            وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ
+          </p>
+          <p class="translation">
+            "Dan di antara tanda-tanda (kebesaran-Nya) ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."
+          </p>
+          <p class="verse-reference">(QS. Ar-Rum: 21)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- C. PROFIL MEMPELAI -->
+    <section id="mempelai" class="section text-center">
+      <div class="container">
+        <h2 class="section-title">Kedua Mempelai</h2>
+        <div class="divider-gold"></div>
+
+        <div class="couple-grid">
+          <!-- Mempelai Pria -->
+          <div class="profile-card fade-in">
+            <div class="profile-frame">
+              <img src="assets/images/groom-adi.jpg" alt="Adi Sutisna" class="profile-img" loading="lazy" onerror="this.src='https://via.placeholder.com/300x400/151515/D4AF37?text=Adi+Sutisna'">
+            </div>
+            <h3 class="profile-name">Adi Sutisna</h3>
+            <p class="parents-info">Putra dari Bapak Cucu Sopandi (Alm.)<br>& Ibu Hj. Atik Sumarni</p>
+          </div>
+
+          <div class="ampersand">&</div>
+
+          <!-- Mempelai Wanita -->
+          <div class="profile-card fade-in">
+            <div class="profile-frame">
+              <img src="assets/images/bride-anita.jpg" alt="Anita Intan Lestari" class="profile-img" loading="lazy" onerror="this.src='https://via.placeholder.com/300x400/151515/D4AF37?text=Anita+Intan+Lestari'">
+            </div>
+            <h3 class="profile-name">Anita Intan Lestari</h3>
+            <p class="parents-info">Putri dari Bapak Wawan (Alm.)<br>& Ibu Heni</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- D. INFORMASI ACARA -->
+    <section id="acara" class="section section-dark text-center">
+      <div class="container">
+        <h2 class="section-title">Waktu & Lokasi Acara</h2>
+        <div class="divider-gold"></div>
+
+        <div class="events-grid">
+          <!-- AKAD NIKAH -->
+          <div class="event-card">
+            <div class="event-icon"><i class="fas fa-ring"></i></div>
+            <h3 class="event-title">AKAD NIKAH</h3>
+            <p class="event-date">Sabtu, 28 November 2026</p>
+            <p class="event-time"><i class="far fa-clock"></i> 09.00 – 11.00 WIB</p>
+          </div>
+
+          <!-- RESEPSI -->
+          <div class="event-card">
+            <div class="event-icon"><i class="fas fa-glass-cheers"></i></div>
+            <h3 class="event-title">RESEPSI</h3>
+            <p class="event-date">Sabtu, 28 November 2026</p>
+            <p class="event-time"><i class="far fa-clock"></i> 11.00 WIB – Selesai</p>
+          </div>
+        </div>
+
+        <!-- LOKASI -->
+        <div class="location-box">
+          <h4 class="location-heading"><i class="fas fa-map-marker-alt"></i> Lokasi Acara</h4>
+          <p class="location-venue">Rumah Mempelai Wanita</p>
+          <p class="location-address">
+            Kp. Sindang Heula RT. 03 RW. 12, Desa Bayongbong, Kecamatan Bayongbong, Kabupaten Garut.
+          </p>
+          <a href="https://maps.app.goo.gl/HePrug4atrppLJDU6" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+            <i class="fas fa-directions"></i> LIHAT LOKASI DI GOOGLE MAPS
+          </a>
+        </div>
+
+        <!-- E. COUNTDOWN -->
+        <div class="countdown-wrapper">
+          <h3 class="countdown-title">Hitung Mundur Acara</h3>
+          <div id="countdown-timer" class="timer-grid">
+            <div class="timer-box"><span id="cd-days">00</span><label>Hari</label></div>
+            <div class="timer-box"><span id="cd-hours">00</span><label>Jam</label></div>
+            <div class="timer-box"><span id="cd-minutes">00</span><label>Menit</label></div>
+            <div class="timer-box"><span id="cd-seconds">00</span><label>Detik</label></div>
+          </div>
+          <div id="countdown-passed-msg" class="passed-msg hidden">
+            Alhamdulillah, acara pernikahan telah berlangsung.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- F. GALERI FOTO PREWEDDING -->
+    <section id="galeri" class="section text-center">
+      <div class="container">
+        <h2 class="section-title">Galeri Bahagia</h2>
+        <div class="divider-gold"></div>
+
+        <div class="gallery-grid" id="gallery-grid">
+          <!-- Rendered via script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox-modal" class="lightbox hidden">
+      <button id="lightbox-close" class="lightbox-btn close-btn" aria-label="Tutup"><i class="fas fa-times"></i></button>
+      <button id="lightbox-prev" class="lightbox-btn prev-btn" aria-label="Sebelumnya"><i class="fas fa-chevron-left"></i></button>
+      <img id="lightbox-img" src="" alt="Prewedding Zoom">
+      <button id="lightbox-next" class="lightbox-btn next-btn" aria-label="Berikutnya"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <!-- G. RSVP / KONFIRMASI KEHADIRAN -->
+    <section id="rsvp" class="section section-dark">
+      <div class="container max-w-600">
+        <h2 class="section-title text-center">Konfirmasi Kehadiran</h2>
+        <div class="divider-gold"></div>
+        <p class="text-center section-desc">Mohon konfirmasikan kehadiran Anda di bawah ini:</p>
+
+        <form id="rsvp-form" class="custom-form">
+          <div class="form-group">
+            <label for="rsvp-name">Nama Tamu</label>
+            <input type="text" id="rsvp-name" name="name" placeholder="Masukkan Nama Anda" required maxlength="100">
+          </div>
+          <div class="form-group">
+            <label for="rsvp-status">Konfirmasi Kehadiran</label>
+            <select id="rsvp-status" name="status" required>
+              <option value="" disabled selected>-- Pilih Status Kehadiran --</option>
+              <option value="Hadir">Hadir</option>
+              <option value="Tidak Hadir">Tidak Hadir</option>
+            </select>
+          </div>
+          <button type="submit" id="btn-submit-rsvp" class="btn-primary w-full">
+            <i class="fas fa-paper-plane"></i> KIRIM KONFIRMASI
+          </button>
+        </form>
+        <div id="rsvp-alert" class="alert-box hidden"></div>
+      </div>
+    </section>
+
+    <!-- H. BUKU TAMU DIGITAL -->
+    <section class="section">
+      <div class="container max-w-700">
+        <h2 class="section-title text-center">Buku Tamu & Doa</h2>
+        <div class="divider-gold"></div>
+
+        <form id="guestbook-form" class="custom-form">
+          <div class="form-group">
+            <label for="gb-name">Nama</label>
+            <input type="text" id="gb-name" name="name" placeholder="Nama Anda" required maxlength="100">
+          </div>
+          <div class="form-group">
+            <label for="gb-message">Ucapan & Doa</label>
+            <textarea id="gb-message" name="message" rows="4" placeholder="Tuliskan ucapan dan doa terbaik Anda..." required maxlength="500"></textarea>
+          </div>
+          <button type="submit" id="btn-submit-gb" class="btn-primary w-full">
+            <i class="fas fa-comment-dots"></i> KIRIM UCAPAN
+          </button>
+        </form>
+        <div id="gb-alert" class="alert-box hidden"></div>
+
+        <!-- LIST UCAPAN -->
+        <div class="guestbook-list-wrapper">
+          <h3 class="list-heading">Ucapan Dari Sahabat & Keluarga</h3>
+          <div id="guestbook-messages-container" class="messages-list">
+            <p class="text-center loading-text">Memuat ucapan...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- I. HADIAH DIGITAL -->
+    <section class="section section-dark text-center">
+      <div class="container max-w-700">
+        <h2 class="section-title">Tanda Kasih</h2>
+        <div class="divider-gold"></div>
+        <p class="gift-intro">
+          Doa restu Anda merupakan hadiah terindah bagi kami. Namun, apabila Bapak/Ibu/Saudara/i berkenan memberikan tanda kasih, dapat disampaikan melalui rekening berikut:
+        </p>
+
+        <div class="cards-bank-grid">
+          <!-- BCA -->
+          <div class="bank-card">
+            <div class="bank-header"><i class="fas fa-university"></i> BANK BCA</div>
+            <div class="account-number" id="acc-bca">6768309877</div>
+            <div class="account-holder">a.n. Adi Sutisna</div>
+            <button class="btn-copy" onclick="copyToClipboard('6768309877', 'Bank BCA')">
+              <i class="far fa-copy"></i> SALIN NOMOR REKENING
+            </button>
+          </div>
+
+          <!-- BRI -->
+          <div class="bank-card">
+            <div class="bank-header"><i class="fas fa-university"></i> BANK BRI</div>
+            <div class="account-number" id="acc-bri">41790102 8468508</div>
+            <div class="account-holder">a.n. Adi Sutisna</div>
+            <button class="btn-copy" onclick="copyToClipboard('41790102 8468508', 'Bank BRI')">
+              <i class="far fa-copy"></i> SALIN NOMOR REKENING
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- J. DOA PERNIKAHAN & SHARE -->
+    <section class="section text-center">
+      <div class="container max-w-600">
+        <div class="quran-card">
+          <p class="arabic-verse font-lg">
+            بَارَكَ اللَّهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ
+          </p>
+          <p class="translation">
+            "Semoga Allah memberkahimu, melimpahkan berkah atasmu, dan mengumpulkan kalian berdua dalam kebaikan."
+          </p>
+        </div>
+
+        <div class="share-invitation-box">
+          <button id="btn-share-wa" class="btn-secondary">
+            <i class="fab fa-whatsapp"></i> Bagikan Ke WhatsApp
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- K. PENUTUP -->
+    <footer class="footer-section text-center">
+      <div class="container">
+        <p class="closing-text">
+          Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kedua mempelai.
+        </p>
+        <p class="closing-greeting">Wassalamu’alaikum Warahmatullahi Wabarakatuh</p>
+        <p class="family-signature">Dengan penuh rasa syukur dan bahagia,</p>
+        <p class="family-members">Keluarga Besar Kedua Mempelai</p>
+        <h2 class="footer-couple">ADI SUTISNA & ANITA INTAN LESTARI</h2>
+        <p class="footer-date">28 NOVEMBER 2026</p>
+      </div>
+    </footer>
+
+    <!-- NAVBAR BAWAH (MOBILE NAV) -->
+    <nav class="bottom-nav">
+      <a href="#home" class="nav-item active"><i class="fas fa-home"></i><span>Home</span></a>
+      <a href="#mempelai" class="nav-item"><i class="fas fa-heart"></i><span>Mempelai</span></a>
+      <a href="#acara" class="nav-item"><i class="fas fa-calendar-alt"></i><span>Acara</span></a>
+      <a href="#galeri" class="nav-item"><i class="fas fa-images"></i><span>Galeri</span></a>
+      <a href="#rsvp" class="nav-item"><i class="fas fa-check-circle"></i><span>RSVP</span></a>
+    </nav>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
